@@ -38,6 +38,7 @@ router.post('/login', function(req, res){
 // localhost:3000/users/account 
 router.get('/account',  authenticateUser, function(req, res){
     const { user } = req 
+    console.log(user)
     res.send(user)
 })
 
