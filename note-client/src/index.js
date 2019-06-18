@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {BrowserRouter, Route,Link} from 'react-router-dom'
+import {BrowserRouter, Route,Link,Switch} from 'react-router-dom'
 import NotesList from'./components/notes/List'
 import NotesShow from './components/notes/Show'
 import NotesNew from './components/notes/New'
@@ -13,7 +13,7 @@ import Register from './components/notes/register'
 import Login from './components/notes/login'
 import Account from './components/notes/account'
 import Logout from './components/notes/Logout' 
-import Exaample from './components/notes/example'
+// import Exaample from './components/notes/example'
 class App extends React.Component{
   constructor(){
     super()
@@ -70,13 +70,14 @@ class App extends React.Component{
                             )}                                                  
                             {this.state.isAuthenticated &&(
                               <div>
+                                <Switch>
                                 <Route path="/users/account" component={Account} exact={true}/>
                                 <Route path="/notes" component={NotesList} exact={true}/>
                                 <Route path="/notes/new" component={NotesNew}/>
 
                                 <Route path="/notes/edit/:id" component={NotesEdit} exact={true}/>
                                 <Route path="/categories/edit/:id" component={CategoriesEdit}/>
-                                <Route path="/categories/new" component={CategoriesNew}/> 
+                                <Route path="/categories/new" component={CategoriesNew} exact={true}/> 
                                 <Route path="/categories/:id" component={CategoriesShow}/>
                                 <Route path="/notes/:id" component={NotesShow} exact={true}/>
                                 <Route path="/categories" component={CategoriesList}/>
@@ -84,6 +85,7 @@ class App extends React.Component{
                                 <Route path="/users/logout" render={(props)=>{
                               return <Logout {...props} handleAuth={this.handleAuth}/>
                             }} exact={false}/>
+                            </Switch>
                               </div>
                             )}
                             

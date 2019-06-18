@@ -53,16 +53,16 @@ class Login extends React.Component{
                                          <div className="form-group row justify-content-center">
                                              
                                                 <label className="col-sm-2 col-form-label"> Email: </label>
-                                                        <div class="col-sm-10">
-                                                        <input class="form-control" placeholder="enter your email" type="text" name="email" onChange={this.handleChange}/> 
+                                                        <div className="col-sm-10">
+                                                        <input className="form-control" placeholder="enter your email" type="text" name="email" onChange={this.handleChange}/> 
                                                         </div>                               
                                                         <br/>  <br/>  
                                                 <label className="col-sm-2 col-form-label"> Password: </label>
-                                                    <div class="col-sm-10">
-                                                            <input class="form-control" type="password" placeholder="enter password"name="password" onChange={this.handleChange}/>  
+                                                    <div className="col-sm-10">
+                                                            <input className="form-control" type="password" placeholder="enter password"name="password" onChange={this.handleChange}/>  
                                                     </div>   
                                                     <br/>  <br/>  
-                                                <input type="submit" class="col-sm-4 btn btn-primary btn-block mx-auto" value="Login"/>   
+                                                <input type="submit" className="col-sm-4 btn btn-primary btn-block mx-auto" value="Login"/>   
                                                 
                                             </div>                
                                  </form>  
