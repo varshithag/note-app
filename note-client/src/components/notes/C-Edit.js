@@ -16,9 +16,10 @@ class CategoriesEdit extends React.Component{
             this.setState(()=>({
                 category:response.data
             }))
-        })
+        }) 
     }
         handleSubmit=(formData)=>{
+            
             axios.put(`/categories/${this.state.note._id}`,formData)
             .then(response=>{
                 if(response.data.hasOwnProperty('error')){

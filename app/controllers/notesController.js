@@ -88,7 +88,6 @@ module.exports.list=function(req,res){
 }   
 
 module.exports.create=function(req,res){
-   
     const {user}=req
     const body=req.body
     const note=new Note(body)

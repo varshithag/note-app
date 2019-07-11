@@ -13,9 +13,7 @@ const categoriesRouter=require('./app/controllers/categoriesController')
 const tagsRouter=require('./app/controllers/tagController')
 const { usersRouter } = require('./app/controllers/UserController')
 
-app.get('/', (req,res)=>{
-    res.send('welcome to my note taking app')
-})
+
 
 
 app.use(express.json())
@@ -34,7 +32,9 @@ const port = process.env.PORT || 3005
     		res.sendFile(path.join(__dirname + "/note-client/build/index.html"))
 	})
 
-
+	app.get('/', (req,res)=>{
+		res.send('welcome to my note taking app')
+	})
 
 app.listen(port,()=>{
     console.log('listening to port',port)

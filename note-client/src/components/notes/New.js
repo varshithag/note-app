@@ -21,7 +21,7 @@ class NotesNew extends React.Component{
                 console.log(response.data.errors)
             }else{
                 //change to another component
-                this.props.history.push(`/notes`)
+                this.props.history.push(`/contacts`)
             }
         })
     }
